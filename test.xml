@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
-  <object type="ro.platon.xmler.tests.testClasses.ClassWithChildClass">
-    <childObject type="class ro.platon.xmler.tests.testClasses.BasicClass">
-      <object type="ro.platon.xmler.tests.testClasses.BasicClass">
-        <number type="int">30</number>
-        <string type="class java.lang.String"> aopsidjaspod </string>
-      </object>
-    </childObject>
-    <number type="int">42</number>
-    <string type="class java.lang.String">ASDPOIAJ P</string>
-  </object>
+  <object type="java.lang.Integer">42</object>
 </root>

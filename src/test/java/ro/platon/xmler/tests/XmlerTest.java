@@ -15,6 +15,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class XmlerTest {
     @Test
+    public void intTest() {
+        int i = 42;
+        XmlerWrite writer = new XmlerWrite();
+        XmlerRead reader = new XmlerRead();
+        try {
+            writer.writeObject(i).saveToFile("test.xml");
+            int testI = (int) reader.readObject("test.xml");
+            assertEquals(i, testI);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void stringTest() {
         String str = "asdfasdf";
         XmlerWrite writer = new XmlerWrite();
