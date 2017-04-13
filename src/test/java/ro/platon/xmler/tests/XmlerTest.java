@@ -14,6 +14,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Created by platon on 13.04.2017.
  */
 public class XmlerTest {
+    @Test
+    public void stringTest() {
+        String str = "asdfasdf";
+        XmlerWrite writer = new XmlerWrite();
+        XmlerRead reader = new XmlerRead();
+        try {
+            writer.writeObject(str).saveToFile("test.xml");
+            String testStr = (String) reader.readObject("test.xml");
+            assertEquals(testStr.toString(), str.toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void basicClassTest() {
